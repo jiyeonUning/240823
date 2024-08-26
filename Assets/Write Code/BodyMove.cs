@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BodyMove : MonoBehaviour
@@ -18,5 +16,45 @@ public class BodyMove : MonoBehaviour
         transform.Translate(Vector3.right * z * moveSpeed * Time.deltaTime, Space.Self);
         // 회전 기능
         transform.Rotate(Vector3.up, x * rotateSpeed * Time.deltaTime, Space.World);
+
+        //==================================================================================
+
+        if (Input.GetButton("Jump"))
+        {
+            move.SpeedUp();
+        }
+        else
+        {
+            move.SpeedDown();
+        }
+
+        if (move.rotateSpeed > wingRotateValue)
+        { MoveUp(); }
+        else
+        { MoveDown(); }
+    }
+
+    [SerializeField] WingMove move;
+    [SerializeField] float wingRotateValue;
+
+    public void MoveUp()
+    {
+        transform.Translate(Vector3.up * (move.rotateSpeed - wingRotateValue) / 100 * Time.deltaTime);
+
+        if (transform.position.y > 5)
+        {
+            transform.position = new Vector3(transform.position.x, 5, transform.position.z);
+        }
+    }
+
+    public void MoveDown()
+    {
+        transform.Translate(Vector3.up * (move.rotateSpeed - wingRotateValue) / 100 * Time.deltaTime);
+
+        if (transform.position.y < 0)
+        {
+            transform.position = new Vector3(transform.position.x, 0, transform.position.z);
+        }
+
     }
 }
