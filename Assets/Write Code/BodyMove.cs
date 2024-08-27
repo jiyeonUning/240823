@@ -36,6 +36,13 @@ public class BodyMove : MonoBehaviour
         {
             propeller.SpeedDown();
         }
-    }
 
+        // 수직으로 상승하는 기능 ( = 공중이동 )
+        transform.Translate(Vector3.up * (propeller.RotateSpeed - flySpeed) / 100 * Time.deltaTime);
+
+        // 최대 상승 높이를 정의하고, (수치 50으로 고정)
+        float posY = Mathf.Clamp(transform.position.y, 0, 50);
+        // 해당 값의 높이만큼만 상승할 수 있게 해준다.
+        transform.position = new Vector3(transform.position.x, posY, transform.position.z);
+    }
 }

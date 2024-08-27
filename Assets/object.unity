@@ -198,8 +198,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 208337589}
-  m_LocalRotation: {x: 0.0826511, y: -0.70601153, z: 0.08327661, w: 0.6984136}
-  m_LocalPosition: {x: 47.058792, y: 17.310226, z: 1.0882866}
+  m_LocalRotation: {x: -0.10174431, y: 0.8894844, z: -0.24155083, w: -0.3743246}
+  m_LocalPosition: {x: 92.17438, y: 99.160324, z: 103.28078}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -329,7 +329,7 @@ Transform:
   m_GameObject: {fileID: 781210039}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 20, y: 20, z: 20}
+  m_LocalScale: {x: 50, y: 50, z: 50}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -5323,10 +5323,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 718ad7bdd7e59a94d96493e8fea0e2ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 30
-  rotateSpeed: 90
+  moveSpeed: 50
+  rotateSpeed: 70
   propeller: {fileID: 920254271726339078}
-  flySpeed: 500
+  flySpeed: 100
 --- !u!4 &920254271542414513
 Transform:
   m_ObjectHideFlags: 0
@@ -5701,9 +5701,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: 0
-  maxRotateSpeed: 650
-  accelerate: 500
-  decelerate: 100
+  maxRotateSpeed: 600
+  accelerate: 100
+  decelerate: 50
 --- !u!33 &920254271814618560
 MeshFilter:
   m_ObjectHideFlags: 0
